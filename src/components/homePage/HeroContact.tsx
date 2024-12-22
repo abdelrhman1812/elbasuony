@@ -9,7 +9,7 @@ const HeroContact = () => {
             borderTopRightRadius: "15px",
             borderTopLeftRadius: "15px",
           }}
-          className="backdrop-blur-custom drop-shadow-custom bg-[#ffffffa8] px-5 py-2 uppercase leading-[36px] tracking-[0.2em] text-[#02598A]"
+          className="bg-[#ffffffa8] px-5 py-2 uppercase leading-[36px] tracking-[0.2em] text-[#02598A] drop-shadow-custom backdrop-blur-custom"
         >
           Call
         </button>
@@ -18,7 +18,7 @@ const HeroContact = () => {
             borderTopRightRadius: "15px",
             borderTopLeftRadius: "15px",
           }}
-          className="backdrop-blur-custom drop-shadow-custom px-5 py-2 uppercase leading-[36px] tracking-[0.2em] text-[#02598A]"
+          className="px-5 py-2 uppercase leading-[36px] tracking-[0.2em] text-[#02598A] drop-shadow-custom backdrop-blur-custom"
         >
           Gallery
         </button>
@@ -29,7 +29,7 @@ const HeroContact = () => {
           borderBottomRightRadius: "20px",
           borderBottomLeftRadius: "20px",
         }}
-        className="backdrop-blur-custom drop-shadow-custom flex w-full max-w-[920px] items-center justify-between gap-4 bg-white/80 px-8 py-6"
+        className="flex w-full max-w-[920px] items-center justify-between gap-4 bg-white/80 px-8 py-6 drop-shadow-custom backdrop-blur-custom"
       >
         <div className="flex w-full flex-col items-start gap-5 md:max-w-[644px] md:flex-row">
           {/* Location Section */}
@@ -56,12 +56,17 @@ const HeroContact = () => {
           {/* Price Range Section */}
           <div className="w-[calc(100%-48px)] p-0 md:pl-4">
             <h4 className="mb-3 font-Poppins text-lg font-bold">Price Range</h4>
-            <p className="text-sm text-gray-600">LE</p>
+            <p className="flex items-center gap-5 text-sm text-gray-600">
+              LE
+              <div className="flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-[15px] bg-black text-white md:hidden">
+                <Search className="h-5 w-5" />
+              </div>
+            </p>
           </div>
         </div>
 
         {/* Search Icon */}
-        <div className="flex h-[54px] w-[54px] cursor-pointer items-center justify-center rounded-[15px] bg-black text-white">
+        <div className="hidden h-[54px] w-[54px] cursor-pointer items-center justify-center rounded-[15px] bg-black text-white md:flex">
           <Search className="h-5 w-5" />
         </div>
       </div>
